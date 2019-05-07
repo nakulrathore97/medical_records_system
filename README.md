@@ -2,7 +2,7 @@
 
 The system is implemented in the form of web application. It was developed using Python and [Flask](http://flask.pocoo.org/)
 
-The system automatically updates critical status based on factors such as haemoglobin.
+The system automatically updates critical status based on factors such as Haemoglobin.
 
 ## Getting Started
 
@@ -40,5 +40,8 @@ For running on a server
 flask run --host=0.0.0.0
 ```
 
-The default credentials are username:admin and password:admin
+The default credentials are 
+```username:admin```
+and 
+```password:admin```
 
