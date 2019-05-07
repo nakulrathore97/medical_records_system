@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard</title>
+	<meta charset="UTF-8">
+	<style>
+		.button {
+    		background-color: #4CAF50; /* Green */
+    		border: none;
+    		color: white;
+    		padding: 20px;
+    		text-align: center;
+    		text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin: 4px 2px;
+    		cursor: pointer;
+    		border-radius: 8px;
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/ico.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<br>
+					<form action='dash' method ='POST'>
+					<input value="{{id}}" type='text' name='id' id ='id' placeholder="Search Patient ID">
+					<input type='submit' name='submit'/ value="Search">
+					</form><br>
+	
+					<table>
+						{%for row in x%}
+						<thead>
+							<tr class="table100-head">
+								<th class="column1" colspan="3" style="text-align:center">Patient Details: id:{{row[0]}}</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1"><b>Name:</b>{{row[1]}}</td>
+									<td class="column2"><b>Age:</b>{{row[2]}}</td>
+									<td class="column3"><b>Gender:</b>{{row[3]}}</td>
+								</tr>
+								<tr>
+									<td class="column3"><b>Location:</b> {{row[4]}}</td>
+									<td class="column3"><b>Critical:</b> {{row[12]}}</td>
+								</tr>
+								
+							</tbody>
+						{%endfor%}
+					</table>
+					<a href="/create" class="button">Add Patient</a>
+					<a href="/logout" class="button">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

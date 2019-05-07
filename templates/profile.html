@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Patient Details</title>
+	<meta charset="UTF-8">
+	<style>
+		.button {
+    		background-color: #4CAF50; /* Green */
+    		border: none;
+    		color: white;
+    		padding: 20px;
+    		text-align: center;
+    		text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin: 4px 2px;
+    		cursor: pointer;
+    		border-radius: 8px;
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1" colspan=3 style="text-align:center">Patient Details: {{id}}</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1"><b>Name:</b> {{name}}</td>
+									<td class="column2"><b>Age:</b> {{age}}</td>
+									<td class="column3"><b>Gender:</b> {{gender}}</td>
+								</tr>
+								<tr>
+									<td class="column1"><b>Blood Group:</b> {{bg}}</td>
+									<td class="column2"><b>Haemoglobin:</b> {{hb}}</td>
+									<td class="column3"><b>Location:</b> {{loc}}</td>
+
+								</tr>
+								<tr>
+									<td class="column1"><b>Allergies:</b> {{alle}}</td>
+									<td class="column2"><b>Symptoms:</b> {{sym}}</td>
+								</tr>
+								<tr>
+									<td class="column1"><b>Insured:</b> {{ins}}</td>
+									<td class="column2"><b>Admitted:</b> {{adm}}</td>
+									<td class="column3"><b>Critical:</b> {{dan}}</td>
+								</tr>
+								<tr>
+									<td class="column1" colspan="3"><b>History: {{his}}</b></td>
+								</tr>
+								<tr>
+									<td class="column1" colspan="3"><b>Medication: {{med}}</b></td>
+								</tr>
+							</tbody>
+					</table>
+					<a href="/edit/{{id}}" class="button">Edit</a>
+					<a href="/dash" class="button">Dashboard</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

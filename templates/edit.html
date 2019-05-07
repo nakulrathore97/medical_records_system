@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Edit Details</title>
+	<meta charset="UTF-8">
+	<style>
+		.button {
+    		background-color: #4CAF50; /* Green */
+    		border: none;
+    		color: white;
+    		padding: 20px;
+    		text-align: center;
+    		text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin: 4px 2px;
+    		cursor: pointer;
+    		border-radius: 8px;
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<form action='edit' method ='POST'>
+						<input value="{{id}}" type='text' name='id' id ='id' style="display:none;" >
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1" colspan=3 style="text-align:center">Patient Details: {{id}}</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1"><b>Name:</b> <input value="{{name}}" type='text' name='name' id ='name'></td>
+									<td class="column2"><b>Age:</b> <input value="{{age}}" type='text' name='age' id ='age'></td>
+									<td class="column3"><b>Gender:</b><input value="{{gender}}" type='text' name='gender' id ='gender'></td>
+								</tr>
+								<tr>
+									<td class="column1"><b>Blood Group:</b> <input value="{{bg}}" type='text' name='bg' id ='bg'></td>
+									<td class="column2"><b>Haemoglobin:</b> <input value="{{hb}}" type='text' name='hb' id ='hb'></td>
+									<td class="column3"><b>Location:</b><input value="{{loc}}" type='text' name='loc' id ='loc'></td>
+
+								</tr>
+								<tr>
+									<td class="column1"><b>Allergies:</b> <input value="{{alle}}" type='text' name='alle' id ='alle'></td>
+									<td class="column2"><b>Symptoms:</b> <input value="{{sym}}" type='text' name='sym' id ='sym'></td>
+								</tr>
+								<tr>
+									<td class="column1"><b>Insured:</b> <input value="{{ins}}" type='text' name='ins' id ='ins'></td>
+									<td class="column2"><b>Admitted:</b> <input value="{{adm}}" type='text' name='adm' id ='adm'></td>
+									<td class="column3"><b>Critical:</b> <input value="{{dan}}" type='text' name='dan' id ='dan'></td>
+								</tr>
+								<tr>
+									<td class="column1" colspan="3"><b>History: <input value="{{his}}" type='text' name='his' id ='his'><br></td>
+								</tr>
+								<tr>
+									<td class="column1" colspan="3"><b>Medication: <input value="{{med}}" type='text' name='med' id ='med'><br></td>
+								</tr>
+							</tbody>
+					</table>
+					<button class="button" type='submit' name='submit'/>Update</button>
+					<a href="/dash" class="button">Dashboard</a>
+					<!-- <input type='submit' name='submit'/> -->
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
