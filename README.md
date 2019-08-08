@@ -10,7 +10,7 @@ The med.db file contains the sqlite record for the patients.
 
 ### Prerequisites
 
-python3
+[python3](https://www.python.org/downloads/)
 
 [Flask](http://flask.pocoo.org/)
 
